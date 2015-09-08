@@ -1,0 +1,34 @@
+<html>
+	<head></head>
+	<body class="container" ng-app="masonryApp">
+	    <div class="row" ng-controller="DemoCtrl">
+            <div class="span12">
+                <h2>In Action</h2>
+                <div class="btn-group">
+                    <button class="btn btn-primary" ng-click="add()">Add</button>
+                    <button class="btn btn-danger" ng-click="remove()">Remove</button>
+                </div>
+                <div masonry>
+                    <div class="masonry-brick" ng-repeat="brick in bricks">
+                        <img ng-src="{{ brick.src }}" alt="A masonry brick">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/jquery-bridget/jquery.bridget.js"></script>
+        <script src="bower_components/get-style-property/get-style-property.js"></script>
+        <script src="bower_components/get-size/get-size.js"></script>
+        <script src="bower_components/eventEmitter/EventEmitter.js"></script>
+        <script src="bower_components/eventie/eventie.js"></script>
+        <script src="bower_components/doc-ready/doc-ready.js"></script>
+        <script src="bower_components/matches-selector/matches-selector.js"></script>
+        <script src="bower_components/outlayer/item.js"></script>
+        <script src="bower_components/outlayer/outlayer.js"></script>
+        <script src="bower_components/masonry/masonry.js"></script>
+        <script src="bower_components/imagesloaded/imagesloaded.js"></script>
+		<script src="bower_components/angular/angular.min.js"></script>
+        <script src="bower_components/angular-masonry/angular-masonry.js"></script>
+        <script src="js/masonryApp.js"></script>
+	</body>
+</html>
