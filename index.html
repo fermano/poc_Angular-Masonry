@@ -1,5 +1,7 @@
 <html>
-	<head></head>
+	<head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>        
+    </head>    
 	<body class="container" ng-app="masonryApp">
 	    <div class="row" ng-controller="DemoCtrl">
             <div class="span12">
@@ -15,6 +17,10 @@
                 </div>
             </div>
         </div>
+        
+        <input type="file" id="inputCSV" ng-click="pegaCSV(this)">
+        <div id="CSVsaida"></div>
+
         <script src="bower_components/jquery/dist/jquery.js"></script>
         <script src="bower_components/jquery-bridget/jquery.bridget.js"></script>
         <script src="bower_components/get-style-property/get-style-property.js"></script>
