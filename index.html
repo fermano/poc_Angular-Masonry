@@ -5,21 +5,20 @@
 	<body class="container" ng-app="masonryApp">
 	    <div class="row" ng-controller="DemoCtrl">
             <div class="span12">
-                <h2>In Action</h2>
-                <div class="btn-group">
+                <h2>Dashboard Orizon</h2>
+                <div class="btn-group" style="display:none">
                     <button class="btn btn-primary" ng-click="add()">Add</button>
                     <button class="btn btn-danger" ng-click="remove()">Remove</button>
                 </div>
                 <div masonry>
-                    <div class="masonry-brick" ng-repeat="brick in bricks">
-                        <img ng-src="{{ brick.src }}" alt="A masonry brick">
+                    <div class="masonry-brick" ng-repeat="device in siteScopeDevices">
+                        <img ng-src="{{ device.imageSrc }}" alt="{{ device.name }}">
+                        <p><b><font size="2"> {{ device.name }} </b></p>
+                        <p>({{ device.type }})</font><p>
                     </div>
                 </div>
             </div>
         </div>
-        
-        <input type="file" id="inputCSV" ng-click="pegaCSV(this)">
-        <div id="CSVsaida"></div>
 
         <script src="bower_components/jquery/dist/jquery.js"></script>
         <script src="bower_components/jquery-bridget/jquery.bridget.js"></script>
