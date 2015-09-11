@@ -40,12 +40,14 @@ angular.module('masonryApp', ['wu.masonry']).
             genSiteScopeDevice("MANCHESTER01:PING:BAD"),
             genSiteScopeDevice("MANCHESTER01:TOMCAT:WARNING")
         ];
+        //TODO iterar
 
         function genSiteScopeDevice(siteScopeLineLog) {
             var device = siteScopeLineLog.split(":");
             var deviceName = device[0];
             var deviceType = device[1];
 
+            //TODO Melhorar este tratamento e quebrar em outra função
             var deviceStatus = "img/";
             if (device[2] == "OK") deviceStatus += "ic-ok.png";
             else if (device[2] == "WARNING") deviceStatus += "ic-warning.png";
